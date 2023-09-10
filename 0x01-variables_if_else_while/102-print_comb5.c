@@ -2,7 +2,6 @@
 
 /**
  * main - it prints all possible combinations of two two-digit numbers
- *
  * Then Return 0 Always  (Success)
  */
 int main(void)
