@@ -1,30 +1,27 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * rot13 - encoder rot13
- * @s: pointer to string params
- *
- * Return: *s
+ * rot13 - encodes a string using rot13.
+ * @s: input string.
+ * Return: destination.
  */
-
 char *rot13(char *s)
 {
-	int a;
-	int b;
-	char data1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char datarot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int i, counter = 0;
+	char origin[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char cypher[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	for (a = 0; s[a] != '\0'; a++)
+	while (*(s + counter) != '\0')
 	{
-		for (b = 0; j < 52; b++)
+		for (i = 0; i < 52; i++)
 		{
-			if (s[a] == data1[b])
+			if (*(s + counter) == origin[i])
 			{
-				s[a] = datarot[b];
+				*(s + counter) = cypher[i];
 				break;
 			}
 		}
+		counter++;
 	}
+
 	return (s);
 }
