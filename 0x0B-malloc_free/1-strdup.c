@@ -10,7 +10,7 @@
 char *_strdup(char *str)
 {
 	int i;
-	char *emulate;
+	char *timi;
 	int num = 0;
 
 	if (str == NULL)
@@ -18,11 +18,11 @@ char *_strdup(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 		num++;
-	emulate = malloc(sizeof(char) * num + 1);
+	timi = malloc(sizeof(char) * num + 1);
 
-	if (emulate == NULL)
+	if (timi == NULL)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
-		emulate[i] = str[i];
-	return (emulate);
+		timi[i] = str[i];
+	return (timi);
 }
