@@ -11,12 +11,11 @@ size_t list_len(const list_t *h)
 {
 	size_t calculate = 0;
 	const list_t *present = h;
-	const list_t *head;
 
 	while (present != NULL)
 	{
 		calculate++;
-		head = present->next;
+		present  = present->next;
 	}
 
 	return (calculate);
