@@ -5,17 +5,23 @@
  * @h: linked list of type listint_t to print
  * Return: number of nodes
  */
+
 size_t print_listint(const listint_t *h)
+
 {
-	size_t element_count = 0;
+	size_t numer = 0;
 
-	const listint_t *ptr = h;
+	while (h)
 
-	for (; ptr != NULL; ptr = ptr->next)
 	{
-		printf("%d\n", ptr->n);
-		element_count++;
+		printf("%d\n", h->n);
+		num++;
+
+		h = h->next;
+
 	}
 
-	return (element_count);
+	return (numer);
+
 }
+
