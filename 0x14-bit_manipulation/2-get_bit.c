@@ -1,6 +1,5 @@
 #include"main.h"
 
-
 /**
  * get_bit - prog returns the value of a bit at a given index.
  * @n: number to check bits in
@@ -12,18 +11,22 @@ int get_bit(unsigned long int n, unsigned int index)
 
 {
 
-	unsigned long int division, checked;
+	unsigned long int div, check;
 
 
 	if (index > (sizeof(unsigned long int) * 8 - 1))
 
 		return (-1);
 
-	division = 1 << index;
+	div = 1 << index;
 
-	checked = n & division;
+	check = n & div;
 
-	if (checked == division)
+	if (check == div)
 
 		return (1);
+
+	return (0);
+
 }
+
